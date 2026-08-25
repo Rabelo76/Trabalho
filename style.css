@@ -1,15 +1,21 @@
-*{
+* {
     margin: 0px;
     padding: 0px;
     font-family: 'roboto', sans-serif;
 }
 
-a{
-    color:inherit;
+html, body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+}
+
+a {
+    color: inherit;
     text-decoration: none;
 }
 
-header{
+header {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
@@ -19,47 +25,270 @@ header{
     align-items: center;
 }
 
-header a{
+header a {
     font-size: 14px;
     border: 1px solid whitesmoke;
     padding: 6px;
     border-radius: 3px;
 }
 
-header div{
+header div {
     display: flex;
     flex-direction: row;
     gap: 20px;
 }
 
-header img{
+header img {
     height: 60px;
-    width: 80px;
+    width: 75px;
 }
 
-body{
-    height: 100%;
-    width: 100%;
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
 }
 
-main{
+main {
     background-color: #222;
-    height: 100%;
-    width: 100%;
+    flex: 1;
 }
 
-footer{
+footer {
     display: flex;
     justify-content: center;
     align-items: center;
     background-color: #202525;
     color: white;
     gap: 20px;
+    padding: 10px 20px;
 }
-footer div{
+
+footer div {
     display: flex;
     gap: 20px;
 }
+
 footer a {
     color: #1b6d6d;
+}
+
+
+/* ========================= */
+/* CONTEÚDO PRINCIPAL */
+/* ========================= */
+
+.bem-vindo {
+    color: white;
+    padding: 60px 80px;
+    max-width: 1100px;
+    margin: auto;
+}
+
+.bem-vindo h2 {
+    font-size: 28px;
+    padding: 30px 0px 12px 0px;
+    color: #f5f5f5;
+}
+
+.bem-vindo h2:first-child {
+    padding-top: 0px;
+}
+
+.bem-vindo p {
+    font-size: 18px;
+    line-height: 1.7;
+    color: #d6d6d6;
+    margin-bottom: 15px;
+}
+
+
+/* DESTAQUE */
+
+.destaque {
+    background-color: #292f2f;
+    border-left: 4px solid #1b6d6d;
+    padding: 25px;
+    margin: 35px 0px;
+    border-radius: 5px;
+}
+
+.destaque h3 {
+    font-size: 21px;
+    margin-bottom: 12px;
+    color: white;
+}
+
+.destaque p {
+    margin-bottom: 8px;
+}
+
+
+/* INFORMAÇÕES */
+
+.informacoes {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 18px;
+    margin: 25px 0px 40px 0px;
+}
+
+.info-box {
+    background-color: #292f2f;
+    padding: 22px;
+    border-radius: 5px;
+    border: 1px solid #363d3d;
+}
+
+.info-box:hover {
+    border-color: #1b6d6d;
+}
+
+.info-box h3 {
+    font-size: 19px;
+    margin-bottom: 10px;
+    color: white;
+}
+
+.info-box p {
+    font-size: 16px;
+    margin: 0px;
+}
+
+
+/* PASSOS */
+
+.passos {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    gap: 15px;
+    margin: 25px 0px 45px 0px;
+}
+
+.passo {
+    background-color: #292f2f;
+    padding: 22px 18px;
+    border-radius: 5px;
+    text-align: center;
+    border: 1px solid #363d3d;
+}
+
+.passo span {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 38px;
+    height: 38px;
+
+    margin: 0px auto 15px auto;
+
+    background-color: #1b6d6d;
+    color: white;
+
+    border-radius: 50%;
+    font-weight: bold;
+}
+
+.passo h3 {
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+
+.passo p {
+    font-size: 15px;
+    line-height: 1.5;
+    margin: 0px;
+}
+
+
+/* VÍDEO */
+
+.video {
+    width: 100%;
+    max-width: 800px;
+    margin: 30px auto 50px auto;
+}
+
+.video iframe {
+    display: block;
+    width: 100%;
+    height: 450px;
+    border-radius: 6px;
+}
+
+
+/* FINAL */
+
+.final {
+    text-align: center;
+    background-color: #292f2f;
+    padding: 35px;
+    margin-top: 30px;
+    border-radius: 6px;
+    border: 1px solid #363d3d;
+}
+
+.final h2 {
+    padding: 0px 0px 12px 0px;
+}
+
+.final a {
+    display: inline-block;
+    background-color: #1b6d6d;
+    color: white;
+    padding: 12px 22px;
+    margin-top: 10px;
+    border-radius: 4px;
+}
+
+.final a:hover {
+    background-color: #248888;
+}
+
+
+/* RESPONSIVIDADE */
+
+@media (max-width: 800px) {
+
+    .bem-vindo {
+        padding: 40px 25px;
+    }
+
+    .bem-vindo h2 {
+        font-size: 24px;
+    }
+
+    .bem-vindo p {
+        font-size: 17px;
+    }
+
+    .informacoes {
+        grid-template-columns: 1fr;
+    }
+
+    .passos {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .video iframe {
+        height: 300px;
+    }
+}
+
+
+@media (max-width: 500px) {
+
+    .bem-vindo {
+        padding: 35px 18px;
+    }
+
+    .passos {
+        grid-template-columns: 1fr;
+    }
+
+    .video iframe {
+        height: 220px;
+    }
+
 }
