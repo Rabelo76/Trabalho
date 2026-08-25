@@ -1,0 +1,21 @@
+#login {
+    padding: 20px;
+    border: 10px solid;
+    border-radius: 4px;
+}
+
+#email, #senha {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid;
+    box-sizing: border-box;
+}
+
+footer{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #202525;
+    color: white;
+    gap: 20px;
+}
