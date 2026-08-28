@@ -30,6 +30,12 @@ header a {
     border: 1px solid whitesmoke;
     padding: 6px;
     border-radius: 3px;
+    transition: background-color 0.2s, color 0.2s;
+}
+
+header a:hover {
+    background-color: whitesmoke;
+    color: #202525;
 }
 
 header div {
