@@ -1,0 +1,12 @@
+{
+    "cadastrados":[
+        {
+            "id": 1,
+            "nome": "Felipe",
+            "sobrenome": "Vasconcelos",
+            "cpf": "456.123.789-00",
+            "email": "felipelegal@gmail.com",
+            "senha": "12345678"
+        }
+    ]
+}
