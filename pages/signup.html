@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Cadastro</title>
     <!-- Fav -->
      <link rel="shortcut icon" href="img/EscudoPMESP.png" type="image/x-icon">
 
@@ -13,7 +13,7 @@
 <body>
     <header>
         <div>
-            <img src="img/EscudoPMESP.png" alt="">
+            <img src="/Trabalho/img/EscudoPMESP.png" alt="">
         </div>
 
         <div>
@@ -22,7 +22,14 @@
         </div>
     </header>
     <main>
-
+        <div id="cadastro">
+            <input type="text" id="nome" placeholder="Nome">
+            <input type="text" id="sobrenome" placeholder="Sobrenome">
+            <input type="number" id="cpf" placeholder="CPF">
+            <input type="email" id="email" placeholder="E-mail">
+            <input type="password" id="senha" placeholder="Senha">
+            <button onclick="cadastrar()">Casdastrar</button>
+        </div>
     </main>
     <footer>
         <div>
