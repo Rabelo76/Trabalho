@@ -1,21 +1,164 @@
-#login {
-    padding: 20px;
-    border: 10px solid;
-    border-radius: 4px;
-}
-
-#email, #senha {
-    width: 100%;
-    padding: 10px;
-    border: 1px solid;
+* {
+    margin: 0;
+    padding: 0;
     box-sizing: border-box;
+    font-family: 'Roboto', sans-serif, system-ui;
 }
 
-footer{
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    background-color: #f4f4f4;
+}
+
+header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    background-color: #202525;
+    color: white;
+    padding: 10px 30px;
+    align-items: center;
+}
+
+header div {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 15px;
+}
+
+header img {
+    height: 60px;
+    width: auto;
+    object-fit: contain;
+}
+
+header a {
+    font-size: 14px;
+    border: 1px solid whitesmoke;
+    padding: 8px 16px;
+    border-radius: 4px;
+    color: white;
+    text-decoration: none;
+    transition: background-color 0.2s, color 0.2s;
+}
+
+header a:hover {
+    background-color: whitesmoke;
+    color: #202525;
+}
+
+main {
+    background-color: #f4f4f4;
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 40px 20px;
+}
+
+#login, #cadastro {
+    background-color: #ffffff;
+    width: 100%;
+    max-width: 480px;
+    padding: 30px;
+    border: 1px solid #d3d3d3;
+    border-radius: 4px;
+    box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.05);
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+#login::before {
+    content: "Entrar";
+    font-size: 22px;
+    font-weight: 700;
+    color: #000;
+    margin-bottom: 8px;
+}
+
+#cadastro::before {
+    content: "Criar Conta";
+    font-size: 22px;
+    font-weight: 700;
+    color: #000;
+    margin-bottom: 8px;
+}
+
+main input,
+#email, #senha, #nome, #sobrenome, #cpf {
+    width: 100%;
+    padding: 12px 14px;
+    border: 1px solid #cccccc;
+    border-radius: 3px;
+    background-color: #ffffff;
+    font-size: 14px;
+    color: #333333;
+    outline: none;
+    transition: border-color 0.2s, background-color 0.2s;
+}
+
+main input::placeholder {
+    color: #888888;
+}
+
+main input:hover,
+main input:focus {
+    background-color: #ffffff;
+    border-color: #333333;
+}
+
+button {
+    width: 100%;
+    padding: 12px;
+    border: none;
+    border-radius: 3px;
+    background-color: #333333;
+    color: #ffffff;
+    font-size: 14px;
+    font-weight: 700;
+    cursor: pointer;
+    text-align: center;
+    margin-top: 8px;
+    transition: background-color 0.2s;
+}
+
+button:hover {
+    background-color: #111111;
+}
+
+footer {
     display: flex;
     justify-content: center;
     align-items: center;
     background-color: #202525;
     color: white;
-    gap: 20px;
+    gap: 25px;
+    padding: 15px 20px;
+    font-size: 14px;
+    flex-wrap: wrap;
+}
+
+footer div {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+footer p {
+    color: #cccccc;
+}
+
+footer a {
+    color: #26a69a;
+    text-decoration: none;
+    transition: color 0.2s;
+}
+
+footer a:hover {
+    color: #80cbc4;
+    text-decoration: underline;
 }
