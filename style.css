@@ -161,6 +161,19 @@ footer a {
     margin: 0px;
 }
 
+.icon-txt-header{
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    gap: 5px;
+    align-items: baseline;
+    justify-content: baseline;
+}
+
+.icon-txt-header svg{
+    font-size: 20px;
+}
+
 
 /* PASSOS */
 
