@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ocorrência</title>
+    <link rel="shortcut icon" href="img/EscudoPMESP.png" type="image/x-icon">
+    <link rel="stylesheet" href="style2.css">
+</head>
+<body>
+    <header>
+        <div>
+            <img src="../img/EscudoPMESP.png" alt="Escudo PMESP">
+        </div>
+        <div>
+            <a href="../index.html">Home</a>
+            <a href="signin.html">Entrar</a>
+            <a href="signup.html">Criar Login</a>
+        </div>
+    </header>
+    <main>
+        <div>
+            <h1>Relatório de ocorrência</h1>
+            <h2>Relate o incidente, fornecendo as seguintes informações:</h2>
+            <hr>
+            <form action="#" method="POST">
+                <ul>
+                    <!-- Data/Horário do relatório -->
+                    <li>
+                        <label>Data/Horário do relatório</label>
+                        <div class="row-inputs">
+                            <div class="input-group">
+                                <input type="date" id="data_relatorio" placeholder="DD/MM/YYYY">
+                                <span class="sub-label">Data</span>
+                            </div>
+                            <div class="input-group">
+                                <input type="time" id="hora_relatorio" placeholder="HH:MM">
+                                <span class="sub-label">Hora Minutos</span>
+                            </div>
+                            <div class="input-group auto-width">
+                                <select name="periodo_relatorio" id="periodo_relatorio">
+                                    <option value="AM">AM</option>
+                                    <option value="PM" selected>PM</option>
+                                </select>
+                            </div>
+                        </div>
+                    </li>
+
+                    <!-- Data/Horário do incidente -->
+                    <li>
+                        <label>Data/Horário do incidente</label>
+                        <div class="row-inputs">
+                            <div class="input-group">
+                                <input type="date" id="data_ocorrencia" placeholder="DD/MM/YYYY">
+                                <span class="sub-label">Data</span>
+                            </div>
+                            <div class="input-group">
+                                <input type="time" id="hora_ocorrencia" placeholder="HH:MM">
+                                <span class="sub-label">Hora Minutos</span>
+                            </div>
+                            <div class="input-group auto-width">
+                                <select name="periodo_ocorrencia" id="periodo_ocorrencia">
+                                    <option value="AM">AM</option>
+                                    <option value="PM" selected>PM</option>
+                                </select>
+                            </div>
+                        </div>
+                    </li>
+
+                    <!-- Relatório de incidente emitido por -->
+                    <li>
+                        <label>Relatório de incidente emitido por</label>
+                        <div class="row-inputs">
+                            <div class="input-group">
+                                <input type="text" id="tratamento">
+                                <span class="sub-label">Sr/Sra/Srta.</span>
+                            </div>
+                            <div class="input-group">
+                                <input type="text" id="autor_nome">
+                                <span class="sub-label">Nome</span>
+                            </div>
+                            <div class="input-group">
+                                <input type="text" id="autor_sobrenome">
+                                <span class="sub-label">Sobrenome</span>
+                            </div>
+                        </div>
+                    </li>
+
+                    <li>
+                        <label for="local_ocorrencia">Local da ocorrência (forneça detalhes específicos)</label>
+                        <div>
+                            <textarea name="local_ocorrencia" id="local_ocorrencia"></textarea>
+                        </div>
+                    </li>
+                    <li>
+                        <label for="natureza_incidente">Natureza do incidente</label>
+                        <div>
+                            <textarea name="natureza_incidente" id="natureza_incidente"></textarea>
+                        </div>
+                    </li>
+                    <li>
+                        <label for="detalhes_incidente">Detalhes do incidente</label>
+                        <div>
+                            <textarea name="detalhes_incidente" id="detalhes_incidente"></textarea>
+                        </div>
+                    </li>
+                    <li>
+                        <label for="motivo_incidente">O que motivou o incidente?</label>
+                        <div>
+                            <textarea name="motivo_incidente" id="motivo_incidente"></textarea>
+                        </div>
+                    </li>
+                    <li>
+                        <label for="relatorio_policia">Um relatório do incidente foi emitido para a polícia?</label>
+                        <div>
+                            <textarea name="relatorio_policia" id="relatorio_policia"></textarea>
+                        </div>
+                    </li>
+                    <li>
+                        <label for="alguem_preso">Alguém foi preso até o momento em relação ao incidente?</label>
+                        <div>
+                            <textarea name="alguem_preso" id="alguem_preso"></textarea>
+                        </div>
+                    </li>
+
+                    <hr>
+
+                    <!-- Nome Completo -->
+                    <li>
+                        <label>Nome Completo</label>
+                        <div class="row-inputs">
+                            <div class="input-group">
+                                <input type="text" id="nome">
+                                <span class="sub-label">Nome</span>
+                            </div>
+                            <div class="input-group">
+                                <input type="text" id="sobrenome">
+                                <span class="sub-label">Sobrenome</span>
+                            </div>
+                        </div>
+                    </li>
+
+                    <li>
+                        <label for="telefone">Telefone:</label>
+                        <div>
+                            <input type="tel" id="telefone" placeholder="(00) 00000-0000">
+                        </div>
+                    </li>
+
+                    <!-- Endereço -->
+                    <li>
+                        <label>Endereço</label>
+                        <div class="column-inputs">
+                            <div class="input-group">
+                                <input type="text" id="endereco">
+                                <span class="sub-label">Endereço</span>
+                            </div>
+                            <div class="input-group">
+                                <input type="text" id="endereco_cont">
+                                <span class="sub-label">Endereço (cont.)</span>
+                            </div>
+                            <div class="row-inputs">
+                                <div class="input-group">
+                                    <input type="text" id="cidade">
+                                    <span class="sub-label">Cidade</span>
+                                </div>
+                                <div class="input-group">
+                                    <input type="text" id="estado">
+                                    <span class="sub-label">Estado</span>
+                                </div>
+                            </div>
+                            <div class="input-group">
+                                <input type="text" id="cep">
+                                <span class="sub-label">CEP / Código Postal</span>
+                            </div>
+                        </div>
+                    </li>
+
+                    <li>
+                        <label>Você deseja que a polícia entre em contato com você?</label>
+                        <div class="column-inputs gap-sm">
+                            <div class="radio-check-group">
+                                <input type="radio" id="contato_sim" name="contato_policia" value="sim">
+                                <label for="contato_sim">Sim</label>
+                            </div>
+                            <div class="radio-check-group">
+                                <input type="radio" id="contato_nao" name="contato_policia" value="nao">
+                                <label for="contato_nao">Não</label>
+                            </div>
+                        </div>
+                    </li>
+
+                    <li>
+                        <label for="comentarios">Comentários adicionais</label>
+                        <div>
+                            <textarea name="comentarios" id="comentarios"></textarea>
+                        </div>
+                    </li>
+
+                    <hr>
+
+                    <li>
+                        <div class="radio-check-group">
+                            <input type="checkbox" id="declaracao_veracidade" required>
+                            <label for="declaracao_veracidade">Certifico que as informações acima são verdadeiras e corretas.</label>
+                        </div>
+                    </li>
+
+                    <hr>
+
+                    <li>
+                        <div>
+                            <button type="submit">Reportar!</button>
+                        </div>
+                    </li>
+                </ul>
+            </form>
+        </div>
+    </main>
+    <footer>
+        <div>
+            <p>Feito por</p>
+            <a href="https://github.com/Donadei1203" target="_blank" rel="noopener noreferrer">Gustavo Donadei</a>
+            <a href="https://github.com/Rabelo76" target="_blank" rel="noopener noreferrer">Guilherme Rabelo</a>
+        </div>
+        <div>
+            <a href="https://github.com/Rabelo76/Trabalho" target="_blank" rel="noopener noreferrer">GitHub</a>
+        </div>
+    </footer>
+</body>
+</html>

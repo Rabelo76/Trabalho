@@ -9,7 +9,7 @@ function entrar() {
         var login = data.find(user => user.email === email && user.senha === senha);
         
         if (login) {
-            window.location.href = "";
+            window.location.href = "../pages/ocorrencia.html";
         } else {
             alert("E-mail/senha incorretos! Tente novamente!");
         }
