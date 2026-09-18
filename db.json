@@ -8,5 +8,28 @@
             "email": "felipelegal@gmail.com",
             "senha": "12345678"
         }
+    ],
+    "relatorio":[
+        {
+        "id": 1,
+        "info_relatorio":{
+            "data_relatorio": "18/09/2026",
+            "hora_relatorio": "11:09",
+            "hora_tipo": "AM"
+        },
+        "info_incidente": {
+            "data_incidente": "12/09/2026",
+            "hora_relatorio": "21:30",
+            "hora_tipo": "PM",
+            "nome_emicao": "Gustavo",
+            "sobrenome_emicao": "Donadei Manfredini"
+        },
+        "local_ocorrencia": "TEXTO LONGOOOOOOOOOOOOOOO",
+        "natureza_incidente": "TEXTO LONGOOOOOOOOOOOOOOO",
+        "detalhes_incidente": "TEXTO LONGOOOOOOOOOOOOOOO",
+        "motivo_incidente": "TEXTO LONGOOOOOOOOOOOOOOO",
+        "relatorio_emitido": "SIM",
+        "preso": "Não, ainda ninguém foi preso",
+        }
     ]
 }
