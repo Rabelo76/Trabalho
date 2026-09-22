@@ -1,48 +1,49 @@
 {
-    "cadastrados":[
-        {
-            "id": 1,
-            "nome": "Felipe",
-            "sobrenome": "Vasconcelos",
-            "cpf": "456.123.789-00",
-            "email": "felipelegal@gmail.com",
-            "senha": "12345678"
-        }
-    ],
-    "relatorio":[
-        {
-            "id": 1,
-            "info_relatorio":{
-                "data_relatorio": "18/09/2026",
-                "hora_relatorio": "11:09",
-                "hora_tipo": "AM"
-            },
-            "info_incidente": {
-                "data_incidente": "12/09/2026",
-                "hora_relatorio": "21:30",
-                "hora_tipo": "PM",
-                "nome_emicao": "Gustavo",
-                "sobrenome_emicao": "Donadei Manfredini"
-            },
-            "local_ocorrencia": "TEXTO LONGOOOOOOOOOOOOOOO",
-            "natureza_incidente": "TEXTO LONGOOOOOOOOOOOOOOO",
-            "detalhes_incidente": "TEXTO LONGOOOOOOOOOOOOOOO",
-            "motivo_incidente": "TEXTO LONGOOOOOOOOOOOOOOO",
-            "relatorio_emitido": "SIM",
-            "preso": "Não, ainda ninguém foi preso",
-            "nome": "um nome ai",
-            "sobrenome": "um sobrenome ai",
-            "telefone": "(11) 12345-6789",
-            "endereco": {
-                "cidade_endereco": "cidade",
-                "estado_endereco": "estado",
-                "cep_endereco": "cep",
-                "bairro_endereco": "bairro",
-                "rua_enreco": "rua",
-                "numeroCasa_endereco": "numeroCasa"
-            },
-            "comentarios_adicionais": "TEXTO LONGOOOOOOOOOOOOOOO",
-            "confirmacao_verdade": "true"
-        }
-    ]
+  "cadastrados": [
+    {
+      "id": 1,
+      "nome": "Felipe",
+      "sobrenome": "Vasconcelos",
+      "cpf": "456.123.789-00",
+      "email": "felipelegal@gmail.com",
+      "senha": "12345678"
+    }
+  ],
+  "relatorio": [
+    {
+      "id": 1,
+      "info_relatorio": {
+        "data_relatorio": "18/09/2026",
+        "hora_relatorio": "11:09",
+        "hora_tipo": "AM"
+      },
+      "info_incidente": {
+        "data_incidente": "12/09/2026",
+        "hora_relatorio": "21:30",
+        "hora_tipo": "PM",
+        "tratamento": "Sr.",
+        "nome_emicao": "Gustavo",
+        "sobrenome_emicao": "Donadei Manfredini"
+      },
+      "local_ocorrencia": "Exemplo de local",
+      "natureza_incidente": "Exemplo de natureza",
+      "detalhes_incidente": "Exemplo de detalhes",
+      "motivo_incidente": "Exemplo de motivo",
+      "relatorio_emitido": "SIM",
+      "preso": "Não",
+      "nome": "Gustavo",
+      "sobrenome": "Donadei",
+      "telefone": "(11) 99999-9999",
+      "endereco": {
+        "cidade_endereco": "São Paulo",
+        "estado_endereco": "SP",
+        "cep_endereco": "01000-000",
+        "bairro_endereco": "Centro",
+        "rua_enreco": "Rua Exemplo",
+        "numeroCasa_endereco": "123"
+      },
+      "comentarios_adicionais": "Sem observações",
+      "confirmacao_verdade": true
+    }
+  ]
 }

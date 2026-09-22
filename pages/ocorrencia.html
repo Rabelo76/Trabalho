@@ -15,7 +15,6 @@
         <div>
             <a href="../index.html">Home</a>
             <a href="../index.html">Configurações</a>
-
         </div>
     </header>
     <main>
@@ -23,9 +22,8 @@
             <h1>Relatório de ocorrência</h1>
             <h2>Relate o incidente, fornecendo as seguintes informações:</h2>
             <hr>
-            <form action="#" method="POST">
+            <form id="form-ocorrencia" action="#" method="POST">
                 <ul>
-                    <!-- Data/Horário do relatório -->
                     <li>
                         <label>Data/Horário do relatório</label>
                         <div class="row-inputs">
@@ -46,7 +44,6 @@
                         </div>
                     </li>
 
-                    <!-- Data/Horário do incidente -->
                     <li>
                         <label>Data/Horário do incidente</label>
                         <div class="row-inputs">
@@ -67,7 +64,6 @@
                         </div>
                     </li>
 
-                    <!-- Relatório de incidente emitido por -->
                     <li>
                         <label>Relatório de incidente emitido por</label>
                         <div class="row-inputs">
@@ -85,7 +81,7 @@
                             </div>
                         </div>
                     </li>
-
+                    
                     <li>
                         <label for="local_ocorrencia">Local da ocorrência (forneça detalhes específicos)</label>
                         <div>
@@ -125,7 +121,6 @@
 
                     <hr>
 
-                    <!-- Nome Completo -->
                     <li>
                         <label>Nome Completo</label>
                         <div class="row-inputs">
@@ -147,7 +142,6 @@
                         </div>
                     </li>
 
-                    <!-- Endereço -->
                     <li>
                         <label>Endereço</label>
                         <div class="column-inputs">
@@ -216,5 +210,8 @@
             <a href="https://github.com/Rabelo76/Trabalho" target="_blank" rel="noopener noreferrer">GitHub</a>
         </div>
     </footer>
+
+    <!-- Importação do arquivo JavaScript externo -->
+    <script src="script.js"></script>
 </body>
 </html>
