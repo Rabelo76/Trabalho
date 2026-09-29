@@ -1,6 +1,8 @@
 document.getElementById('form-ocorrencia').addEventListener('submit', function(e) {
     // Evita o recarregamento da página ao submeter o formulário
     e.preventDefault();
+    var mensagemOcorrencia = document.getElementById('mensagem-ocorrencia');
+    mensagemOcorrencia.textContent = '';
 
     // Captura dos valores dos inputs do HTML
     var data_relatorio = document.getElementById('data_relatorio').value;
@@ -36,6 +38,14 @@ document.getElementById('form-ocorrencia').addEventListener('submit', function(e
     var declaracao_veracidade = document.getElementById('declaracao_veracidade').checked;
 
     // Estruturação do objeto nos mesmos moldes do banco de dados/JSON
+    var cpfUsuario = localStorage.getItem('usuarioCpf');
+
+    if (!cpfUsuario) {
+        mensagemOcorrencia.textContent = 'Faça login novamente para registrar uma ocorrência.';
+        window.location.href = 'signin.html';
+        return;
+    }
+
     var payload = {
         info_relatorio: {
             data_relatorio: data_relatorio,
@@ -68,7 +78,10 @@ document.getElementById('form-ocorrencia').addEventListener('submit', function(e
             numeroCasa_endereco: numero
         },
         comentarios_adicionais: comentarios,
-        confirmacao_verdade: declaracao_veracidade
+        confirmacao_verdade: declaracao_veracidade,
+        comentario_policial: "",
+        processo_bo: "Em Andamento",
+        cpf_usuario: cpfUsuario
     };
 
     // Requisição HTTP POST para a API
@@ -86,12 +99,12 @@ document.getElementById('form-ocorrencia').addEventListener('submit', function(e
         return resposta.json();
     })
     .then(function(dados) {
-        alert('Relatório enviado com sucesso!');
+        mensagemOcorrencia.textContent = 'Relatório enviado com sucesso!';
         console.log('Dados cadastrados:', dados);
         document.getElementById('form-ocorrencia').reset();
     })
     .catch(function(erro) {
         console.error('Erro:', erro);
-        alert('Ocorreu um erro ao enviar. Verifique se o backend está rodando em http://localhost:3000.');
+        mensagemOcorrencia.textContent = 'Ocorreu um erro ao enviar. Verifique se o servidor está rodando.';
     });
 });

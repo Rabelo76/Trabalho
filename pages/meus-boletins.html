@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Meus Boletins</title>
+    <meta name="description" content="Consulte os seus boletins de ocorrência, status e comentários policiais.">
+    <link rel="shortcut icon" href="../img/EscudoPMESP.png" type="image/x-icon">
+    <link rel="stylesheet" href="../style/usuario.css">
+</head>
+<body>
+    <header>
+        <div><img src="../img/EscudoPMESP.png" alt="Escudo PMESP"></div>
+        <nav>
+            <a href="home-usuario.html">Home</a>
+            <a href="ocorrencia.html">Registrar B.O.</a>
+            <a href="perfil.html">Meu Perfil</a>
+            <a href="../index.html">Sobre Nós</a>
+        </nav>
+    </header>
+    <main>
+        <section class="cartao boletins">
+            <h1>Meus Boletins de Ocorrência</h1>
+            <p class="descricao">Acompanhe os B.Os registrados com seu CPF.</p>
+            <div class="tabela-wrapper">
+                <table>
+                    <thead>
+                        <tr>
+                            <th scope="col">Nº</th>
+                            <th scope="col">Data do incidente</th>
+                            <th scope="col">Natureza</th>
+                            <th scope="col">Status</th>
+                            <th scope="col">Comentário do policial</th>
+                        </tr>
+                    </thead>
+                    <tbody id="lista-meus-bo"></tbody>
+                </table>
+            </div>
+        </section>
+    </main>
+    <script src="../scripts/meus-boletins.js"></script>
+    <script src="https://vlibras.gov.br/app/vlibras-plugin.js"></script>
+</body>
+</html>

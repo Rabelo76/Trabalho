@@ -1,6 +1,10 @@
-function entrar() {
+function entrar(evento) {
+    evento.preventDefault();
     var email = document.getElementById('email').value;
     var senha = document.getElementById('senha').value;
+    var mensagemLogin = document.getElementById('mensagem-login');
+
+    mensagemLogin.textContent = '';
 
     fetch('http://localhost:3000/cadastrados')
     .then(resposta => resposta.json())
@@ -9,9 +13,18 @@ function entrar() {
         var login = data.find(user => user.email === email && user.senha === senha);
         
         if (login) {
-            window.location.href = "../pages/ocorrencia.html";
+            localStorage.setItem('usuarioId', login.id);
+            localStorage.setItem('usuarioCpf', login.cpf);
+            if (login.papel === 'admin') {
+                window.location.href = "../pages/home-policial.html";
+            } else {
+                window.location.href = "../pages/home-usuario.html";
+            }
         } else {
-            alert("E-mail/senha incorretos! Tente novamente!");
+            mensagemLogin.textContent = 'E-mail ou senha incorretos. Tente novamente.';
         }
+    })
+    .catch(function() {
+        mensagemLogin.textContent = 'Não foi possível acessar o servidor. Tente novamente mais tarde.';
     })
 }

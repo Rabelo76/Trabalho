@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Ocorrência</title>
+    <meta name="description" content="Formulário para registrar um boletim de ocorrência na Delegacia Virtual.">
     <link rel="shortcut icon" href="../img/EscudoPMESP.png" type="image/x-icon">
     <link rel="stylesheet" href="../style/style2.css">
 </head>
@@ -12,10 +13,11 @@
         <div>
             <img src="../img/EscudoPMESP.png" alt="Escudo PMESP">
         </div>
-        <div>
-            <a href="../index.html">Home</a>
-            <a href="../index.html">Configurações</a>
-        </div>
+        <nav aria-label="Navegação do usuário">
+            <a href="home-usuario.html">Home</a>
+            <a href="perfil.html">Meu Perfil</a>
+            <a href="meus-boletins.html">Meus B.Os</a>
+        </nav>
     </header>
     <main>
         <div>
@@ -28,15 +30,15 @@
                         <label>Data/Horário do relatório</label>
                         <div class="row-inputs">
                             <div class="input-group">
-                                <input type="date" id="data_relatorio" placeholder="DD/MM/YYYY">
+                                <input type="date" id="data_relatorio" placeholder="DD/MM/YYYY" aria-label="Data do relatório" required>
                                 <span class="sub-label">Data</span>
                             </div>
                             <div class="input-group">
-                                <input type="time" id="hora_relatorio" placeholder="HH:MM">
+                                <input type="time" id="hora_relatorio" placeholder="HH:MM" aria-label="Hora do relatório" required>
                                 <span class="sub-label">Hora Minutos</span>
                             </div>
                             <div class="input-group auto-width">
-                                <select name="periodo_relatorio" id="periodo_relatorio">
+                                <select name="periodo_relatorio" id="periodo_relatorio" aria-label="Período do relatório">
                                     <option value="AM">AM</option>
                                     <option value="PM" selected>PM</option>
                                 </select>
@@ -48,15 +50,15 @@
                         <label>Data/Horário do incidente</label>
                         <div class="row-inputs">
                             <div class="input-group">
-                                <input type="date" id="data_ocorrencia" placeholder="DD/MM/YYYY">
+                                <input type="date" id="data_ocorrencia" placeholder="DD/MM/YYYY" aria-label="Data da ocorrência" required>
                                 <span class="sub-label">Data</span>
                             </div>
                             <div class="input-group">
-                                <input type="time" id="hora_ocorrencia" placeholder="HH:MM">
+                                <input type="time" id="hora_ocorrencia" placeholder="HH:MM" aria-label="Hora da ocorrência" required>
                                 <span class="sub-label">Hora Minutos</span>
                             </div>
                             <div class="input-group auto-width">
-                                <select name="periodo_ocorrencia" id="periodo_ocorrencia">
+                                <select name="periodo_ocorrencia" id="periodo_ocorrencia" aria-label="Período da ocorrência">
                                     <option value="AM">AM</option>
                                     <option value="PM" selected>PM</option>
                                 </select>
@@ -68,15 +70,15 @@
                         <label>Relatório de incidente emitido por</label>
                         <div class="row-inputs">
                             <div class="input-group">
-                                <input type="text" id="tratamento">
+                                <input type="text" id="tratamento" aria-label="Tratamento do emissor" required>
                                 <span class="sub-label">Sr/Sra/Srta.</span>
                             </div>
                             <div class="input-group">
-                                <input type="text" id="autor_nome">
+                                <input type="text" id="autor_nome" aria-label="Nome do emissor" required>
                                 <span class="sub-label">Nome</span>
                             </div>
                             <div class="input-group">
-                                <input type="text" id="autor_sobrenome">
+                                <input type="text" id="autor_sobrenome" aria-label="Sobrenome do emissor" required>
                                 <span class="sub-label">Sobrenome</span>
                             </div>
                         </div>
@@ -85,37 +87,37 @@
                     <li>
                         <label for="local_ocorrencia">Local da ocorrência (forneça detalhes específicos)</label>
                         <div>
-                            <textarea name="local_ocorrencia" id="local_ocorrencia"></textarea>
+                            <textarea name="local_ocorrencia" id="local_ocorrencia" required></textarea>
                         </div>
                     </li>
                     <li>
                         <label for="natureza_incidente">Natureza do incidente</label>
                         <div>
-                            <textarea name="natureza_incidente" id="natureza_incidente"></textarea>
+                            <textarea name="natureza_incidente" id="natureza_incidente" required></textarea>
                         </div>
                     </li>
                     <li>
                         <label for="detalhes_incidente">Detalhes do incidente</label>
                         <div>
-                            <textarea name="detalhes_incidente" id="detalhes_incidente"></textarea>
+                            <textarea name="detalhes_incidente" id="detalhes_incidente" required></textarea>
                         </div>
                     </li>
                     <li>
                         <label for="motivo_incidente">O que motivou o incidente?</label>
                         <div>
-                            <textarea name="motivo_incidente" id="motivo_incidente"></textarea>
+                            <textarea name="motivo_incidente" id="motivo_incidente" required></textarea>
                         </div>
                     </li>
                     <li>
                         <label for="relatorio_policia">Um relatório do incidente foi emitido para a polícia?</label>
                         <div>
-                            <textarea name="relatorio_policia" id="relatorio_policia"></textarea>
+                            <textarea name="relatorio_policia" id="relatorio_policia" required></textarea>
                         </div>
                     </li>
                     <li>
                         <label for="alguem_preso">Alguém foi preso até o momento em relação ao incidente?</label>
                         <div>
-                            <textarea name="alguem_preso" id="alguem_preso"></textarea>
+                            <textarea name="alguem_preso" id="alguem_preso" required></textarea>
                         </div>
                     </li>
 
@@ -125,11 +127,11 @@
                         <label>Nome Completo</label>
                         <div class="row-inputs">
                             <div class="input-group">
-                                <input type="text" id="nome">
+                                <input type="text" id="nome" aria-label="Nome do comunicante" required>
                                 <span class="sub-label">Nome</span>
                             </div>
                             <div class="input-group">
-                                <input type="text" id="sobrenome">
+                                <input type="text" id="sobrenome" aria-label="Sobrenome do comunicante" required>
                                 <span class="sub-label">Sobrenome</span>
                             </div>
                         </div>
@@ -138,7 +140,7 @@
                     <li>
                         <label for="telefone">Telefone:</label>
                         <div>
-                            <input type="tel" id="telefone" placeholder="(00) 00000-0000">
+                            <input type="tel" id="telefone" placeholder="(00) 00000-0000" required>
                         </div>
                     </li>
 
@@ -147,28 +149,28 @@
                         <div class="column-inputs">
                             <div class="row-inputs">
                                 <div class="input-group">
-                                    <input type="text" id="cidade">
+                                    <input type="text" id="cidade" aria-label="Cidade" required>
                                     <span class="sub-label">Cidade</span>
                                 </div>
                                 <div class="input-group">
-                                    <input type="text" id="estado">
+                                    <input type="text" id="estado" aria-label="Estado" required>
                                     <span class="sub-label">Estado</span>
                                 </div>
                             </div>
                             <div class="input-group">
-                                <input type="text" id="cep">
+                                <input type="text" id="cep" aria-label="CEP" required>
                                 <span class="sub-label">CEP / Código Postal</span>
                             </div>
                             <div class="input-group">
-                                <input type="text" id="bairro">
+                                <input type="text" id="bairro" aria-label="Bairro" required>
                                 <span class="sub-label">Bairro</span>
                             </div>
                             <div class="input-group">
-                                <input type="text" id="rua">
+                                <input type="text" id="rua" aria-label="Rua" required>
                                 <span class="sub-label">Rua</span>
                             </div>
                             <div class="input-group">
-                                <input type="text" id="numero">
+                                <input type="text" id="numero" aria-label="Número da casa" required>
                                 <span class="sub-label">Número da casa</span>
                             </div>
                         </div>
@@ -176,7 +178,7 @@
                     <li>
                         <label for="comentarios">Comentários adicionais</label>
                         <div>
-                            <textarea name="comentarios" id="comentarios"></textarea>
+                            <textarea name="comentarios" id="comentarios" required></textarea>
                         </div>
                     </li>
 
@@ -198,6 +200,7 @@
                     </li>
                 </ul>
             </form>
+            <p id="mensagem-ocorrencia" class="mensagem" aria-live="polite"></p>
         </div>
     </main>
     <footer>
@@ -212,6 +215,7 @@
     </footer>
 
     <!-- Importação do arquivo JavaScript externo -->
-    <script src="script.js"></script>
+    <script src="../scripts/ocorrencia.js"></script>
+    <script src="https://vlibras.gov.br/app/vlibras-plugin.js"></script>
 </body>
 </html>

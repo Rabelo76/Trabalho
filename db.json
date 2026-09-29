@@ -1,12 +1,22 @@
 {
   "cadastrados": [
     {
+      "id": 2,
+      "nome": "Guilherme Rabelo",
+      "sobrenome": "Gonzaga",
+      "cpf": "123.456.789-00",
+      "email": "rabelolegal@gmail.com",
+      "senha": "12345678",
+      "papel": "admin"
+    },
+    {
       "id": 1,
       "nome": "Felipe",
       "sobrenome": "Vasconcelos",
       "cpf": "456.123.789-00",
       "email": "felipelegal@gmail.com",
-      "senha": "12345678"
+      "senha": "12345678",
+      "papel": "usuario"
     }
   ],
   "relatorio": [
@@ -43,7 +53,10 @@
         "numeroCasa_endereco": "123"
       },
       "comentarios_adicionais": "Sem observações",
-      "confirmacao_verdade": true
+      "confirmacao_verdade": true,
+      "comentario_policial": "",
+      "processo_bo": "Em Andamento",
+      "cpf_usuario": ""
     }
   ]
 }

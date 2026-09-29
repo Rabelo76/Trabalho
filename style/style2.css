@@ -23,7 +23,8 @@ header {
     align-items: center;
 }
 
-header div {
+header div,
+header nav {
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -199,6 +200,14 @@ button {
 
 button:hover {
     background-color: #384040;
+}
+
+.mensagem {
+    min-height: 20px;
+    margin-top: 14px;
+    color: #176b63;
+    font-size: 14px;
+    text-align: center;
 }
 
 /* Footer */

@@ -1,4 +1,5 @@
-function cadastrar() {
+function cadastrar(evento) {
+    evento.preventDefault();
     var nome = document.getElementById('nome').value
     var sobrenome = document.getElementById('sobrenome').value
     var cpf = document.getElementById('cpf').value
@@ -8,7 +9,7 @@ function cadastrar() {
     fetch('http://localhost:3000/cadastrados', {
         method: 'POST',
         headers: {
-            'Content-Type': 'appllication/json'
+            'Content-Type': 'application/json'
         },
         body: JSON.stringify({nome: nome, sobrenome:sobrenome, cpf:cpf, email:email, senha:senha})
     }).then(resposta => resposta.json())
