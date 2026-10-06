@@ -1,7 +1,7 @@
 {
   "cadastrados": [
     {
-      "id": 2,
+      "id": "2",
       "nome": "Guilherme Rabelo",
       "sobrenome": "Gonzaga",
       "cpf": "123.456.789-00",
@@ -10,7 +10,7 @@
       "papel": "admin"
     },
     {
-      "id": 1,
+      "id": "1",
       "nome": "Felipe",
       "sobrenome": "Vasconcelos",
       "cpf": "456.123.789-00",
@@ -21,7 +21,7 @@
   ],
   "relatorio": [
     {
-      "id": 1,
+      "id": "1",
       "info_relatorio": {
         "data_relatorio": "18/09/2026",
         "hora_relatorio": "11:09",
@@ -55,8 +55,9 @@
       "comentarios_adicionais": "Sem observações",
       "confirmacao_verdade": true,
       "comentario_policial": "",
-      "processo_bo": "Em Andamento",
+      "processo_bo": "Resolvido",
       "cpf_usuario": ""
     }
-  ]
+  ],
+  "$schema": "./node_modules/json-server/schema.json"
 }

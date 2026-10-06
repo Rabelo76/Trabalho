@@ -27,25 +27,35 @@ function carregarBoletins() {
                 linha.setAttribute('tabindex', '0');
 
                 linha.innerHTML =
-                    '<td>' + texto(boletim.id) + '</td>' +
-                    '<td>' + texto(boletim.nome) + ' ' + texto(boletim.sobrenome) + '</td>' +
-                    '<td>' + texto(boletim.info_incidente && boletim.info_incidente.data_incidente) + '</td>' +
-                    '<td>' + texto(boletim.natureza_incidente) + '</td>' +
-                    '<td><span class="status">' + texto(boletim.processo_bo || 'Em Andamento') + '</span></td>' +
-                    '<td><button class="abrir-bo" type="button" tabindex="0">Visualizar</button></td>';
+                    '<td tabindex="0">' + texto(boletim.id) + '</td>' +
+                    '<td tabindex="0">' + texto(boletim.nome) + ' ' + texto(boletim.sobrenome) + '</td>' +
+                    '<td tabindex="0">' + texto(boletim.info_incidente && boletim.info_incidente.data_incidente) + '</td>' +
+                    '<td tabindex="0">' + texto(boletim.natureza_incidente) + '</td>' +
+                    '<td tabindex="0"><span class="status">' + texto(boletim.processo_bo || 'Em Andamento') + '</span></td>' +
+                    '<td tabindex="0">' +
+                    '<button class="abrir-bo" type="button">Visualizar</button> ' +
+                    '<button class="deletar-bo" type="button">Deletar</button>' +
+                    '</td>';
+
                 linha.querySelector('.abrir-bo').addEventListener('click', function () {
                     abrirBoletim(boletim, linha);
                 });
+
+                linha.querySelector('.deletar-bo').addEventListener('click', function () {
+                    deletarBoletim(boletim);
+                });
+
                 listaBo.appendChild(linha);
+
             });
 
             if (boletins.length === 0) {
-                listaBo.innerHTML = '<tr><td colspan="6">Nenhum boletim registrado.</td></tr>';
+                listaBo.innerHTML = '<tr><td tabindex="0" colspan="6">Nenhum boletim registrado.</td></tr>';
             }
         })
         .catch(function (erro) {
             console.error(erro);
-            listaBo.innerHTML = '<tr><td colspan="6">Não foi possível carregar os B.Os. Verifique se o servidor está rodando.</td></tr>';
+            listaBo.innerHTML = '<tr><td tabindex="0" colspan="6">Não foi possível carregar os B.Os. Verifique se o servidor está rodando.</td></tr>';
         });
 }
 
@@ -130,5 +140,36 @@ document.getElementById('form-atualizacao').addEventListener('submit', function 
             mensagemAdmin.textContent = 'Não foi possível atualizar o B.O. Verifique se o servidor está rodando.';
         });
 });
+
+function deletarBoletim(boletim) {
+    var confirmar = window.confirm(
+        'Tem certeza que deseja deletar o B.O. ' + boletim.id + '?'
+    );
+
+    if (!confirmar) {
+        return;
+    }
+
+    fetch('http://localhost:3000/relatorio/' + boletim.id, {
+        method: 'DELETE'
+    })
+        .then(function (resposta) {
+            if (!resposta.ok) {
+                throw new Error('Não foi possível deletar o boletim.');
+            }
+
+            return resposta.json();
+        })
+        .then(function () {
+            mensagemAdmin.textContent = 'B.O. deletado com sucesso!';
+            carregarBoletins();
+        })
+        .catch(function (erro) {
+            console.error(erro);
+            mensagemAdmin.textContent =
+                'Não foi possível deletar o B.O. Verifique se o servidor está rodando.';
+        });
+}
+
 
 carregarBoletins();

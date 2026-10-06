@@ -203,3 +203,19 @@ textarea {
         padding: 20px;
     }
 }
+
+.deletar-bo {
+    border: 0;
+    border-radius: 4px;
+    padding: 8px 12px;
+    background: #202525;
+    color: #fff;
+    cursor: pointer;
+}
+
+.deletar-bo:hover,
+.deletar-bo:focus-visible {
+    background: #384040;
+    outline: 2px solid #176b63;
+    outline-offset: 2px;
+}
