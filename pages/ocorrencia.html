@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,6 +9,7 @@
     <link rel="shortcut icon" href="../img/EscudoPMESP.png" type="image/x-icon">
     <link rel="stylesheet" href="../style/style2.css">
 </head>
+
 <body>
     <header>
         <div>
@@ -15,8 +17,8 @@
         </div>
         <nav aria-label="Navegação do usuário">
             <a href="home-usuario.html">Home</a>
-            <a href="perfil.html">Meu Perfil</a>
             <a href="meus-boletins.html">Meus B.Os</a>
+            <a href="perfil.html">Meu Perfil</a>
         </nav>
     </header>
     <main>
@@ -30,15 +32,18 @@
                         <label>Data/Horário do relatório</label>
                         <div class="row-inputs">
                             <div class="input-group">
-                                <input type="date" id="data_relatorio" placeholder="DD/MM/YYYY" aria-label="Data do relatório" required>
+                                <input type="date" id="data_relatorio" placeholder="DD/MM/YYYY"
+                                    aria-label="Data do relatório" required>
                                 <span class="sub-label">Data</span>
                             </div>
                             <div class="input-group">
-                                <input type="time" id="hora_relatorio" placeholder="HH:MM" aria-label="Hora do relatório" required>
+                                <input type="time" id="hora_relatorio" placeholder="HH:MM"
+                                    aria-label="Hora do relatório" required>
                                 <span class="sub-label">Hora Minutos</span>
                             </div>
                             <div class="input-group auto-width">
-                                <select name="periodo_relatorio" id="periodo_relatorio" aria-label="Período do relatório">
+                                <select name="periodo_relatorio" id="periodo_relatorio"
+                                    aria-label="Período do relatório">
                                     <option value="AM">AM</option>
                                     <option value="PM" selected>PM</option>
                                 </select>
@@ -50,15 +55,18 @@
                         <label>Data/Horário do incidente</label>
                         <div class="row-inputs">
                             <div class="input-group">
-                                <input type="date" id="data_ocorrencia" placeholder="DD/MM/YYYY" aria-label="Data da ocorrência" required>
+                                <input type="date" id="data_ocorrencia" placeholder="DD/MM/YYYY"
+                                    aria-label="Data da ocorrência" required>
                                 <span class="sub-label">Data</span>
                             </div>
                             <div class="input-group">
-                                <input type="time" id="hora_ocorrencia" placeholder="HH:MM" aria-label="Hora da ocorrência" required>
+                                <input type="time" id="hora_ocorrencia" placeholder="HH:MM"
+                                    aria-label="Hora da ocorrência" required>
                                 <span class="sub-label">Hora Minutos</span>
                             </div>
                             <div class="input-group auto-width">
-                                <select name="periodo_ocorrencia" id="periodo_ocorrencia" aria-label="Período da ocorrência">
+                                <select name="periodo_ocorrencia" id="periodo_ocorrencia"
+                                    aria-label="Período da ocorrência">
                                     <option value="AM">AM</option>
                                     <option value="PM" selected>PM</option>
                                 </select>
@@ -83,7 +91,7 @@
                             </div>
                         </div>
                     </li>
-                    
+
                     <li>
                         <label for="local_ocorrencia">Local da ocorrência (forneça detalhes específicos)</label>
                         <div>
@@ -187,7 +195,8 @@
                     <li>
                         <div class="radio-check-group">
                             <input type="checkbox" id="declaracao_veracidade" required>
-                            <label for="declaracao_veracidade">Certifico que as informações acima são verdadeiras e corretas.</label>
+                            <label for="declaracao_veracidade">Certifico que as informações acima são verdadeiras e
+                                corretas.</label>
                         </div>
                     </li>
 
@@ -218,4 +227,5 @@
     <script src="../scripts/ocorrencia.js"></script>
     <script src="https://vlibras.gov.br/app/vlibras-plugin.js"></script>
 </body>
+
 </html>

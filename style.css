@@ -28,7 +28,7 @@ header {
 header a {
     font-size: 14px;
     border: 1px solid whitesmoke;
-    padding: 6px;
+    padding: 8px 16px;
     border-radius: 3px;
     transition: background-color 0.2s, color 0.2s;
 }

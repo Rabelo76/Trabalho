@@ -16,7 +16,7 @@
         <div>
             <img src="../img/EscudoPMESP.png" alt="Escudo da Polícia Militar do Estado de São Paulo">
         </div>
-
+        <tr tabindex="0"></tr>
         <nav aria-label="Navegação principal">
             <a href="../index.html">Sobre Nós</a>
             <a href="signin.html">Entrar</a>
@@ -25,12 +25,12 @@
     </header>
     <main>
         <form id="login" onsubmit="entrar(event)">
-            <h1>Entrar</h1>
+            <h1 tabindex="0">Entrar</h1>
             <label class="visually-hidden" for="email">E-mail</label>
-            <input type="email" id="email" placeholder="E-mail" autocomplete="email" required>
+            <input type="email" id="email" placeholder="E-mail" autocomplete="email" required tabindex="0">
             <label class="visually-hidden" for="senha">Senha</label>
-            <input type="password" id="senha" placeholder="Senha" autocomplete="current-password" required>
-            <button type="submit">Entrar</button>
+            <input type="password" id="senha" placeholder="Senha" autocomplete="current-password" required tabindex="0">
+            <button type="submit" tabindex="0">Entrar</button>
             <p id="mensagem-login" class="mensagem" aria-live="polite"></p>
         </form>
     </main>

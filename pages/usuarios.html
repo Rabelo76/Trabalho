@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,10 +9,14 @@
     <link rel="shortcut icon" href="../img/EscudoPMESP.png" type="image/x-icon">
     <link rel="stylesheet" href="../style/admin.css">
 </head>
+
 <body>
     <header>
         <div><img src="../img/EscudoPMESP.png" alt="Escudo PMESP"></div>
-        <nav aria-label="Navegação policial"><a href="home-policial.html">Home</a></nav>
+        <nav aria-label="Navegação policial">
+            <a href="home-policial.html">Home</a>
+            <a href="ocorrencia.html">Ocorrências</a>
+        </nav>
     </header>
     <main>
         <section class="painel">
@@ -20,7 +25,7 @@
             <div class="tabela-wrapper">
                 <table>
                     <thead>
-                        <tr>
+                        <tr tabindex="0">
                             <th scope="col">ID</th>
                             <th scope="col">Nome completo</th>
                             <th scope="col">CPF</th>
@@ -28,7 +33,7 @@
                             <th scope="col">Papel</th>
                         </tr>
                     </thead>
-                    <tbody id="lista-usuarios"></tbody>
+                    <tbody id="lista-usuarios" ></tbody>
                 </table>
             </div>
         </section>
@@ -36,4 +41,5 @@
     <script src="../scripts/usuarios.js"></script>
     <script src="https://vlibras.gov.br/app/vlibras-plugin.js"></script>
 </body>
+
 </html>

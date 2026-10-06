@@ -13,25 +13,25 @@ function texto(valor) {
 
 function carregarBoletins() {
     fetch('http://localhost:3000/relatorio')
-        .then(function(resposta) {
+        .then(function (resposta) {
             if (!resposta.ok) {
                 throw new Error('Não foi possível carregar os boletins.');
             }
             return resposta.json();
         })
-        .then(function(boletins) {
+        .then(function (boletins) {
             listaBo.innerHTML = '';
 
-            boletins.forEach(function(boletim) {
-                var linha = document.createElement('tr');
+            boletins.forEach(function (boletim) {
+                var linha = document.createElement('tr [tabindex="0"]');
                 linha.innerHTML =
                     '<td>' + texto(boletim.id) + '</td>' +
                     '<td>' + texto(boletim.nome) + ' ' + texto(boletim.sobrenome) + '</td>' +
                     '<td>' + texto(boletim.info_incidente && boletim.info_incidente.data_incidente) + '</td>' +
                     '<td>' + texto(boletim.natureza_incidente) + '</td>' +
                     '<td><span class="status">' + texto(boletim.processo_bo || 'Em Andamento') + '</span></td>' +
-                    '<td><button class="abrir-bo" type="button">Visualizar</button></td>';
-                linha.querySelector('.abrir-bo').addEventListener('click', function() {
+                    '<td><button class="abrir-bo" type="button" tabindex="0">Visualizar</button></td>';
+                linha.querySelector('.abrir-bo').addEventListener('click', function () {
                     abrirBoletim(boletim, linha);
                 });
                 listaBo.appendChild(linha);
@@ -41,7 +41,7 @@ function carregarBoletins() {
                 listaBo.innerHTML = '<tr><td colspan="6">Nenhum boletim registrado.</td></tr>';
             }
         })
-        .catch(function(erro) {
+        .catch(function (erro) {
             console.error(erro);
             listaBo.innerHTML = '<tr><td colspan="6">Não foi possível carregar os B.Os. Verifique se o servidor está rodando.</td></tr>';
         });
@@ -83,19 +83,19 @@ function fecharModal() {
 }
 
 document.getElementById('fechar-modal').addEventListener('click', fecharModal);
-modal.addEventListener('click', function(evento) {
+modal.addEventListener('click', function (evento) {
     if (evento.target === modal) {
         fecharModal();
     }
 });
 
-document.addEventListener('keydown', function(evento) {
+document.addEventListener('keydown', function (evento) {
     if (evento.key === 'Escape' && modal.classList.contains('aberto')) {
         fecharModal();
     }
 });
 
-document.getElementById('form-atualizacao').addEventListener('submit', function(evento) {
+document.getElementById('form-atualizacao').addEventListener('submit', function (evento) {
     evento.preventDefault();
 
     if (!boletimSelecionado) {
@@ -112,18 +112,18 @@ document.getElementById('form-atualizacao').addEventListener('submit', function(
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify(boletimAtualizado)
     })
-        .then(function(resposta) {
+        .then(function (resposta) {
             if (!resposta.ok) {
                 throw new Error('Não foi possível salvar a atualização.');
             }
             return resposta.json();
         })
-        .then(function() {
+        .then(function () {
             mensagemAdmin.textContent = 'B.O. atualizado com sucesso!';
             fecharModal();
             carregarBoletins();
         })
-        .catch(function(erro) {
+        .catch(function (erro) {
             console.error(erro);
             mensagemAdmin.textContent = 'Não foi possível atualizar o B.O. Verifique se o servidor está rodando.';
         });

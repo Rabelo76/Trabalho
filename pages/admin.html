@@ -18,13 +18,13 @@
     </header>
     <main>
         <section class="painel">
-            <h1>Boletins de Ocorrência</h1>
-            <p>Use o botão Visualizar para consultar os detalhes e atualizar o andamento de um boletim.</p>
+            <h1 tabindex="0">Boletins de Ocorrência</h1>
+            <p tabindex="0">Use o botão Visualizar para consultar os detalhes e atualizar o andamento de um boletim.</p>
             <p id="mensagem-admin" class="mensagem" aria-live="polite"></p>
             <div class="tabela-wrapper">
                 <table>
                     <thead>
-                        <tr>
+                        <tr tabindex="0">
                             <th scope="col">Nº</th>
                             <th scope="col">Envolvido</th>
                             <th scope="col">Data do incidente</th>
@@ -41,18 +41,18 @@
 
     <div id="modal-bo" class="modal" aria-hidden="true">
         <div class="modal-conteudo" role="dialog" aria-modal="true" aria-labelledby="modal-titulo">
-            <button id="fechar-modal" class="fechar" type="button" aria-label="Fechar">&times;</button>
-            <h2 id="modal-titulo">Detalhes do B.O.</h2>
+            <button id="fechar-modal" class="fechar" type="button" aria-label="Fechar" tabindex="0">&times;</button>
+            <h2 id="modal-titulo" tabindex="0">Detalhes do B.O.</h2>
             <div id="detalhes-bo"></div>
-            <form id="form-atualizacao">
-                <label for="comentario_policial">Comentário adicional do policial</label>
-                <textarea id="comentario_policial" placeholder="Descreva como a ocorrência foi tratada ou resolvida."></textarea>
-                <label for="processo_bo">Status do B.O.</label>
-                <select id="processo_bo">
-                    <option value="Em Andamento">Em Andamento</option>
-                    <option value="Resolvido">Resolvido</option>
+            <form id="form-atualizacao" >
+                <label for="comentario_policial" tabindex="0">Comentário adicional do policial</label>
+                <textarea id="comentario_policial" placeholder="Descreva como a ocorrência foi tratada ou resolvida." tabindex="0"></textarea>
+                <label for="processo_bo" tabindex="0">Status do B.O.</label>
+                <select id="processo_bo" tabindex="0">
+                    <option value="Em Andamento" tabindex="0">Em Andamento</option>
+                    <option value="Resolvido" tabindex="0">Resolvido</option>
                 </select>
-                <button type="submit">Salvar atualização</button>
+                <button type="submit" tabindex="0">Salvar atualização</button>
             </form>
         </div>
     </div>
