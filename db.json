@@ -17,47 +17,16 @@
       "email": "felipelegal@gmail.com",
       "senha": "12345678",
       "papel": "usuario"
-    }
-  ],
-  "relatorio": [
+    },
     {
-      "id": "1",
-      "info_relatorio": {
-        "data_relatorio": "18/09/2026",
-        "hora_relatorio": "11:09",
-        "hora_tipo": "AM"
-      },
-      "info_incidente": {
-        "data_incidente": "12/09/2026",
-        "hora_relatorio": "21:30",
-        "hora_tipo": "PM",
-        "tratamento": "Sr.",
-        "nome_emicao": "Gustavo",
-        "sobrenome_emicao": "Donadei Manfredini"
-      },
-      "local_ocorrencia": "Exemplo de local",
-      "natureza_incidente": "Exemplo de natureza",
-      "detalhes_incidente": "Exemplo de detalhes",
-      "motivo_incidente": "Exemplo de motivo",
-      "relatorio_emitido": "SIM",
-      "preso": "Não",
-      "nome": "Gustavo",
-      "sobrenome": "Donadei",
-      "telefone": "(11) 99999-9999",
-      "endereco": {
-        "cidade_endereco": "São Paulo",
-        "estado_endereco": "SP",
-        "cep_endereco": "01000-000",
-        "bairro_endereco": "Centro",
-        "rua_enreco": "Rua Exemplo",
-        "numeroCasa_endereco": "123"
-      },
-      "comentarios_adicionais": "Sem observações",
-      "confirmacao_verdade": true,
-      "comentario_policial": "",
-      "processo_bo": "Resolvido",
-      "cpf_usuario": ""
+      "nome": "Gustavo ",
+      "sobrenome": "Donadaei",
+      "cpf": "474.747.747-47",
+      "email": "gu12038757@gmail.com",
+      "senha": "123456678",
+      "id": "Cbb48WyNwN8"
     }
   ],
+  "relatorio": [],
   "$schema": "./node_modules/json-server/schema.json"
 }
