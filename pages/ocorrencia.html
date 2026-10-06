@@ -23,52 +23,52 @@
     </header>
     <main>
         <div>
-            <h1>Relatório de ocorrência</h1>
-            <h2>Relate o incidente, fornecendo as seguintes informações:</h2>
+            <h1 tabindex="0">Relatório de ocorrência</h1>
+            <h2 tabindex="0">Relate o incidente, fornecendo as seguintes informações:</h2>
             <hr>
             <form id="form-ocorrencia" action="#" method="POST">
                 <ul>
                     <li>
-                        <label>Data/Horário do relatório</label>
+                        <label tabindex="0">Data/Horário do relatório</label>
                         <div class="row-inputs">
                             <div class="input-group">
                                 <input type="date" id="data_relatorio" placeholder="DD/MM/YYYY"
-                                    aria-label="Data do relatório" required>
+                                    aria-label="Data do relatório" required tabindex="0">
                                 <span class="sub-label">Data</span>
                             </div>
                             <div class="input-group">
                                 <input type="time" id="hora_relatorio" placeholder="HH:MM"
-                                    aria-label="Hora do relatório" required>
+                                    aria-label="Hora do relatório" required tabindex="0">
                                 <span class="sub-label">Hora Minutos</span>
                             </div>
                             <div class="input-group auto-width">
                                 <select name="periodo_relatorio" id="periodo_relatorio"
-                                    aria-label="Período do relatório">
-                                    <option value="AM">AM</option>
-                                    <option value="PM" selected>PM</option>
+                                    aria-label="Período do relatório" tabindex="0">
+                                    <option tabindex="0" value="AM">AM</option>
+                                    <option tabindex="0" value="PM" selected>PM</option>
                                 </select>
                             </div>
                         </div>
                     </li>
 
                     <li>
-                        <label>Data/Horário do incidente</label>
+                        <label >Data/Horário do incidente</label>
                         <div class="row-inputs">
                             <div class="input-group">
                                 <input type="date" id="data_ocorrencia" placeholder="DD/MM/YYYY"
-                                    aria-label="Data da ocorrência" required>
+                                    aria-label="Data da ocorrência" required tabindex="0">
                                 <span class="sub-label">Data</span>
                             </div>
                             <div class="input-group">
                                 <input type="time" id="hora_ocorrencia" placeholder="HH:MM"
-                                    aria-label="Hora da ocorrência" required>
+                                    aria-label="Hora da ocorrência" required tabindex="0">
                                 <span class="sub-label">Hora Minutos</span>
                             </div>
                             <div class="input-group auto-width">
                                 <select name="periodo_ocorrencia" id="periodo_ocorrencia"
-                                    aria-label="Período da ocorrência">
-                                    <option value="AM">AM</option>
-                                    <option value="PM" selected>PM</option>
+                                    aria-label="Período da ocorrência" tabindex="0">
+                                    <option tabindex="0" value="AM">AM</option >
+                                    <option tabindex="0" value="PM" selected>PM</option>
                                 </select>
                             </div>
                         </div>
@@ -78,54 +78,54 @@
                         <label>Relatório de incidente emitido por</label>
                         <div class="row-inputs">
                             <div class="input-group">
-                                <input type="text" id="tratamento" aria-label="Tratamento do emissor" required>
+                                <input type="text" id="tratamento" aria-label="Tratamento do emissor" required tabindex="0">
                                 <span class="sub-label">Sr/Sra/Srta.</span>
                             </div>
                             <div class="input-group">
-                                <input type="text" id="autor_nome" aria-label="Nome do emissor" required>
+                                <input type="text" id="autor_nome" aria-label="Nome do emissor" required tabindex="0">
                                 <span class="sub-label">Nome</span>
                             </div>
                             <div class="input-group">
-                                <input type="text" id="autor_sobrenome" aria-label="Sobrenome do emissor" required>
+                                <input type="text" id="autor_sobrenome" aria-label="Sobrenome do emissor" required tabindex="0">
                                 <span class="sub-label">Sobrenome</span>
                             </div>
                         </div>
                     </li>
 
                     <li>
-                        <label for="local_ocorrencia">Local da ocorrência (forneça detalhes específicos)</label>
+                        <label for="local_ocorrencia" tabindex="0">Local da ocorrência (forneça detalhes específicos)</label>
                         <div>
-                            <textarea name="local_ocorrencia" id="local_ocorrencia" required></textarea>
+                            <textarea name="local_ocorrencia" id="local_ocorrencia" tabindex="0" required></textarea>
                         </div>
                     </li>
                     <li>
                         <label for="natureza_incidente">Natureza do incidente</label>
                         <div>
-                            <textarea name="natureza_incidente" id="natureza_incidente" required></textarea>
+                            <textarea name="natureza_incidente" id="natureza_incidente" tabindex="0" required></textarea>
                         </div>
                     </li>
                     <li>
                         <label for="detalhes_incidente">Detalhes do incidente</label>
                         <div>
-                            <textarea name="detalhes_incidente" id="detalhes_incidente" required></textarea>
+                            <textarea name="detalhes_incidente" id="detalhes_incidente" tabindex="0" required></textarea>
                         </div>
                     </li>
                     <li>
                         <label for="motivo_incidente">O que motivou o incidente?</label>
                         <div>
-                            <textarea name="motivo_incidente" id="motivo_incidente" required></textarea>
+                            <textarea name="motivo_incidente" id="motivo_incidente" tabindex="0" required></textarea>
                         </div>
                     </li>
                     <li>
                         <label for="relatorio_policia">Um relatório do incidente foi emitido para a polícia?</label>
                         <div>
-                            <textarea name="relatorio_policia" id="relatorio_policia" required></textarea>
+                            <textarea name="relatorio_policia" id="relatorio_policia" tabindex="0" required></textarea>
                         </div>
                     </li>
                     <li>
                         <label for="alguem_preso">Alguém foi preso até o momento em relação ao incidente?</label>
                         <div>
-                            <textarea name="alguem_preso" id="alguem_preso" required></textarea>
+                            <textarea name="alguem_preso" id="alguem_preso" tabindex="0" required></textarea>
                         </div>
                     </li>
 
@@ -135,11 +135,11 @@
                         <label>Nome Completo</label>
                         <div class="row-inputs">
                             <div class="input-group">
-                                <input type="text" id="nome" aria-label="Nome do comunicante" required>
+                                <input type="text" id="nome" aria-label="Nome do comunicante" tabindex="0" required>
                                 <span class="sub-label">Nome</span>
                             </div>
                             <div class="input-group">
-                                <input type="text" id="sobrenome" aria-label="Sobrenome do comunicante" required>
+                                <input type="text" id="sobrenome" aria-label="Sobrenome do comunicante" tabindex="0" required>
                                 <span class="sub-label">Sobrenome</span>
                             </div>
                         </div>
@@ -148,7 +148,7 @@
                     <li>
                         <label for="telefone">Telefone:</label>
                         <div>
-                            <input type="tel" id="telefone" placeholder="(00) 00000-0000" required>
+                            <input type="tel" id="telefone" placeholder="(00) 00000-0000" tabindex="0" required>
                         </div>
                     </li>
 
@@ -157,44 +157,44 @@
                         <div class="column-inputs">
                             <div class="row-inputs">
                                 <div class="input-group">
-                                    <input type="text" id="cidade" aria-label="Cidade" required>
+                                    <input type="text" id="cidade" aria-label="Cidade" tabindex="0" required>
                                     <span class="sub-label">Cidade</span>
                                 </div>
                                 <div class="input-group">
-                                    <input type="text" id="estado" aria-label="Estado" required>
+                                    <input type="text" id="estado" aria-label="Estado" tabindex="0" required>
                                     <span class="sub-label">Estado</span>
                                 </div>
                             </div>
                             <div class="input-group">
-                                <input type="text" id="cep" aria-label="CEP" required>
+                                <input type="text" id="cep" aria-label="CEP" tabindex="0" required>
                                 <span class="sub-label">CEP / Código Postal</span>
                             </div>
                             <div class="input-group">
-                                <input type="text" id="bairro" aria-label="Bairro" required>
+                                <input type="text" id="bairro" aria-label="Bairro" tabindex="0" required>
                                 <span class="sub-label">Bairro</span>
                             </div>
                             <div class="input-group">
-                                <input type="text" id="rua" aria-label="Rua" required>
+                                <input type="text" id="rua" aria-label="Rua" tabindex="0" required>
                                 <span class="sub-label">Rua</span>
                             </div>
                             <div class="input-group">
-                                <input type="text" id="numero" aria-label="Número da casa" required>
+                                <input type="text" id="numero" aria-label="Número da casa" tabindex="0" required>
                                 <span class="sub-label">Número da casa</span>
                             </div>
                         </div>
                     </li>
                     <li>
-                        <label for="comentarios">Comentários adicionais</label>
+                        <label for="comentarios" tabindex="0">Comentários adicionais</label>
                         <div>
-                            <textarea name="comentarios" id="comentarios" required></textarea>
+                            <textarea name="comentarios" id="comentarios" required tabindex="0"></textarea>
                         </div>
                     </li>
 
                     <hr>
 
                     <li>
-                        <div class="radio-check-group">
-                            <input type="checkbox" id="declaracao_veracidade" required>
+                        <div class="radio-check-group" tabindex="0">
+                            <input type="checkbox" id="declaracao_veracidade" aria-label="Confirmar Certificação que as informações são verdadeiras" required tabindex="0" >
                             <label for="declaracao_veracidade">Certifico que as informações acima são verdadeiras e
                                 corretas.</label>
                         </div>
@@ -204,7 +204,7 @@
 
                     <li>
                         <div>
-                            <button type="submit">Reportar!</button>
+                            <button type="submit" tabindex="0">Reportar!</button>
                         </div>
                     </li>
                 </ul>

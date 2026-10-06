@@ -9,7 +9,9 @@ fetch('http://localhost:3000/cadastrados')
     })
     .then(function(usuarios) {
         usuarios.forEach(function(usuario) {
-            var linha = document.createElement('tr [tabindex="0"]');
+            var linha = document.createElement('tr');
+            linha.setAttribute('tabindex', '0');
+            
             linha.innerHTML =
                 '<td >' + usuario.id + '</td>' +
                 '<td>' + usuario.nome + ' ' + usuario.sobrenome + '</td>' +

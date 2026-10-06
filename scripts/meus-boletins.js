@@ -13,13 +13,14 @@ if (!cpfUsuario) {
         })
         .then(function(boletins) {
             if (boletins.length === 0) {
-                listaMeusBo.innerHTML = '<tr><td colspan="5">Você ainda não possui B.Os registrados.</td></tr>';
+                listaMeusBo.innerHTML = '<tr tabindex="0"><td colspan="5">Você ainda não possui B.Os registrados.</td></tr>';
                 return;
             }
 
             boletins.forEach(function(boletim) {
                 var incidente = boletim.info_incidente || {};
                 var linha = document.createElement('tr');
+                linha.setAttribute('tabindex', '0');
                 linha.innerHTML =
                     '<td>' + boletim.id + '</td>' +
                     '<td>' + (incidente.data_incidente || 'Não informado') + '</td>' +
@@ -31,6 +32,6 @@ if (!cpfUsuario) {
         })
         .catch(function(erro) {
             console.error(erro);
-            listaMeusBo.innerHTML = '<tr><td colspan="5">Não foi possível carregar os B.Os. Verifique se o servidor está rodando.</td></tr>';
+            listaMeusBo.innerHTML = '<tr tabindex="0"><td colspan="5">Não foi possível carregar os B.Os. Verifique se o servidor está rodando.</td></tr>';
         });
 }

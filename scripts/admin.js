@@ -23,7 +23,9 @@ function carregarBoletins() {
             listaBo.innerHTML = '';
 
             boletins.forEach(function (boletim) {
-                var linha = document.createElement('tr [tabindex="0"]');
+                var linha = document.createElement('tr');
+                linha.setAttribute('tabindex', '0');
+
                 linha.innerHTML =
                     '<td>' + texto(boletim.id) + '</td>' +
                     '<td>' + texto(boletim.nome) + ' ' + texto(boletim.sobrenome) + '</td>' +
